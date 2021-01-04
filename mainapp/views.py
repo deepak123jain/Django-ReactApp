@@ -101,6 +101,8 @@ def testSubmit(request):
         responses = body_data["data"]
         userid = body_data["userid"]
         score = 0
+
+        
         metrics = []
         userobj = User.objects.filter(id=userid)[0]
         last_assessment_Score = User.objects.filter(id=userid)[0].last_assessment_score
